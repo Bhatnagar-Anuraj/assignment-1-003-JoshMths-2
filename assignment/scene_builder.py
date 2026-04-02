@@ -85,7 +85,18 @@ cmds.move(building_x, building_height / 2.0, building_z, building)
 #   - Name the object meaningfully with the 'name' parameter or cmds.rename().
 #   - Position it so it sits on the ground (not floating or buried).
 # ---------------------------------------------------------------------------
+tower_base_radius = 3
+tower_base_height = 7
+tower_base_x = 6
+tower_base_z = 3
 
+tower_base = cmds.polyCylinder(
+name = "Water Tower Base",
+radius = tower_base_radius,
+height = tower_base_height,
+)[0]
+
+cmds.move(tower_base_x, tower_base_height/2 , tower_base_z, tower_base)
 
 # ---------------------------------------------------------------------------
 # TODO: Add Object 3
